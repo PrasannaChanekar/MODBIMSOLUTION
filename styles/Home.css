@@ -1,0 +1,657 @@
+/* 🏠 Hero Section */
+
+ 
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/hero_bim_bg.jpg') no-repeat center center/cover;
+    height: 80vh; 
+    display: flex;
+    align-items: center;
+    color: var(--color-light);
+    text-align: left;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex-grow: 1;
+    max-width: 500px;
+}
+.hero-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* BIM Intro Section */
+.bim-intro {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f0f4f7; /* Light BIM-related background */
+}
+
+.bim-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.advantage-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.advantage-card h3 {
+    color: var(--color-primary);
+    margin-top: 15px;
+}
+
+/* Icons (Need to be implemented with an icon library like FontAwesome, or SVG) */
+.advantage-card i {
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+
+/* ... (Keep the HERO SECTION styles as they were) ... */
+
+/* 💡 KEY BIM ADVANTAGES SECTION (UPDATED STYLES) */
+.bim-value-proposition-section {
+    padding: 100px 0; /* More vertical space */
+    text-align: center;
+    background-color: var(--color-light); /* White background for contrast */
+}
+
+.section-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text);
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.advantage-card {
+    background-color: var(--color-bg-light); 
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--color-secondary); /* Accent color on the side */
+    box-shadow: var(--shadow-light);
+    text-align: left;
+    transition: all 0.4s ease;
+    height: 100%; /* Ensures all cards are same height */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect: Lift and change accent color */
+.advantage-card:hover {
+    transform: translateY(-8px);
+    border-left-color: var(--color-primary);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon-wrapper {
+    margin-bottom: 20px;
+}
+
+/* Enhancing the Icons */
+.advantage-card i[class^="icon-"] {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 0 8px rgba(0, 123, 255, 0.2); /* Soft pulsating effect */
+    transition: background-color 0.4s;
+}
+
+.advantage-card:hover i[class^="icon-"] {
+    background-color: var(--color-secondary);
+}
+
+.advantage-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.advantage-card p {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    margin-bottom: 25px;
+}
+
+.card-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: rgba(0, 188, 212, 0.1); /* Light background for the tag */
+    color: var(--color-secondary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ... (Keep the SERVICES PREVIEW SECTION styles as they were) ... */
+
+
+/* ... (Keep BIM ADVANTAGE SECTION styles) ... */
+
+/* 🏢 SERVICES PREVIEW SECTION (UPDATED STYLES) */
+.services-preview-section {
+    background-color: var(--color-bg-light); 
+    padding: 80px 0;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-tile {
+    display: block;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+}
+
+/* Hover Animation: Lift and highlight */
+.service-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.tile-image-wrapper {
+    overflow: hidden;
+    height: 220px;
+}
+
+.service-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Image Zoom on Hover */
+.service-tile:hover img {
+    transform: scale(1.08);
+}
+
+.tile-content {
+    padding: 25px;
+    text-align: left;
+    position: relative;
+}
+
+.tile-content i[class^="icon-"] {
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    background-color: var(--color-secondary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-tile h3 {
+    font-size: 1.4rem;
+    color: var(--color-heading);
+    margin-bottom: 10px;
+}
+
+.service-tile p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    min-height: 50px; /* Ensures consistent card height */
+}
+
+.read-more-link {
+    color: var(--color-primary);
+    font-weight: 700;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.service-tile:hover .read-more-link {
+    color: var(--color-secondary);
+}
+
+/* Specific styling for the training tile */
+.service-tile.training-tile .tile-content i {
+    background-color: var(--color-tertiary); /* Use Orange accent for training */
+}
+
+/* 📱 Responsiveness */
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- Home Page Specific Media Queries --- */
+
+/* 💻 Tablet & Smaller Desktop Adjustments (Max Width 1024px) */
+@media (max-width: 1024px) {
+    /* HERO SECTION (Already covered, adjusts layout to column or smaller text) */
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    /* BIM VALUE PROPOSITION SECTION */
+    .advantage-grid {
+        /* Changes to 2 columns on tablets */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 25px;
+    }
+
+    /* SERVICES PREVIEW SECTION */
+    .services-grid {
+        /* Changes to 2 columns on tablets */
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+/* 📱 Mobile Phone Adjustments (Max Width 768px) */
+@media (max-width: 768px) {
+    
+    /* HERO SECTION */
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text, .hero-model {
+        max-width: 100%;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .hero-model {
+        margin-top: 40px;
+        height: 300px;
+    }
+
+    /* BIM VALUE PROPOSITION SECTION */
+    .bim-value-proposition-section {
+        padding: 60px 0;
+    }
+    
+    .section-subtitle {
+        margin-bottom: 40px;
+    }
+
+    .advantage-grid {
+        /* Full width stack on phones */
+        grid-template-columns: 1fr;
+    }
+
+    .advantage-card {
+        text-align: center;
+        border-left: none; /* Remove side bar on mobile */
+        border-top: 5px solid var(--color-secondary); /* Use top bar instead */
+        padding-top: 20px;
+    }
+    
+    .advantage-card h3 {
+        margin-top: 10px;
+    }
+    
+    .card-icon-wrapper {
+        text-align: center;
+    }
+
+    /* SERVICES PREVIEW SECTION */
+    .services-grid {
+        /* Full width stack on phones */
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- HOME.CSS: ENHANCED RESPONSIVENESS --- */
+
+/* 💻 Tablet & Smaller Desktop Adjustments (Max Width 1024px) */
+@media (max-width: 1024px) {
+    
+    /* HERO SECTION */
+    .hero-section .container {
+        /* Forces vertical stacking */
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+    }
+    
+    .hero-model {
+        max-width: 80%;
+        margin-top: 40px;
+        height: 350px;
+    }
+
+    /* BIM VALUE PROPOSITION SECTION */
+    .advantage-grid {
+        /* 2 columns on tablets */
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+    }
+
+    /* SERVICES PREVIEW SECTION */
+    .services-grid {
+        /* 2 columns on tablets */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* 📱 Mobile Phone Adjustments (Max Width 768px) */
+
+   /* --- HERO SECTION (REVISED FOR MOBILE STABILITY) --- */
+.hero-section {
+    background: var(--color-dark);
+    color: var(--color-light);
+    /* Changed from fixed height to min-height for content safety */
+    min-height: 85vh; 
+    display: flex;
+    align-items: center;
+    padding: 100px 0; /* Ensures padding even if min-height is exceeded */
+}
+
+/* ... (Keep the rest of the desktop .hero-section .container and .hero-text styles) ... */
+
+
+/* 📱 Mobile Phone Adjustments (Max Width 768px) */
+@media (max-width: 768px) {
+    
+    /* REVISED HERO SECTION FIX */
+    .hero-section {
+        /* Reduce minimum height on mobile so it doesn't look too tall */
+        min-height: auto; 
+        padding: 60px 0; /* Reduced padding for smaller screens */
+    }
+
+    .hero-section .container {
+        /* Forces vertical stacking */
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text, .hero-model {
+        max-width: 100%;
+        /* Ensures the text block always comes first */
+        order: 1; 
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-model {
+        /* Place image/model below the text on mobile */
+        order: 2; 
+        margin-top: 40px;
+        margin-bottom: 20px; /* Ensures space below the image */
+        height: 250px; /* Fixed height for placeholder image on mobile */
+    }
+
+    /* ... (Keep the rest of the 768px media query code) ... */
+}
+
+
+@media (max-width: 768px) {
+    
+    /* GLOBAL ADJUSTMENTS for Home Page */
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-buttons {
+        /* Ensures buttons stack if needed */
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    /* BIM VALUE PROPOSITION SECTION */
+    .bim-value-proposition-section {
+        padding: 50px 0;
+    }
+    
+    .advantage-grid {
+        /* Full width stack on all phones */
+        grid-template-columns: 1fr;
+    }
+
+    .advantage-card {
+        text-align: center;
+        border-left: none; 
+        border-top: 5px solid var(--color-secondary); /* Use top bar accent */
+    }
+    
+    .card-icon-wrapper {
+        text-align: center;
+    }
+
+    /* SERVICES PREVIEW SECTION */
+    .services-grid {
+        /* Full width stack on all phones */
+        grid-template-columns: 1fr;
+    }
+    
+    .tile-content i[class^="icon-"] {
+        /* Reposition icon for better stacking layout */
+        position: static; 
+        margin-bottom: 10px;
+        display: inline-flex;
+    }
+    
+    .tile-content {
+        text-align: center;
+    }
+}
+
+/* 🤏 Extra Small Mobile Phones (Max Width 400px) */
+@media (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    .btn {
+        width: 90%; /* Ensure buttons take full width when stacked */
+    }
+}
+
+
+/* --- HOME.CSS: HERO SECTION FINAL ADJUSTMENT --- */
+
+.hero-section {
+    background: var(--color-dark);
+    color: var(--color-light);
+    /* Use calc() to ensure the section fills the viewport AFTER the header */
+    min-height: calc(100vh - var(--header-height-desktop)); 
+    display: flex;
+    align-items: center;
+    padding: 40px 0; /* Consistent internal padding */
+}
+
+
+/* 📱 Mobile Phone Adjustments (Max Width 768px) */
+@media (max-width: 768px) {
+    
+    /* HERO SECTION FINAL MOBILE FIX */
+    .hero-section {
+        /* Use calc() with the mobile height variable */
+        min-height: calc(100vh - var(--header-height-mobile)); 
+        padding: 40px 0;
+    }
+
+    /* ... (rest of the mobile styles, ensuring text and image stack correctly) ... */
+}
+
+/* --- HOME.CSS: HERO SECTION FINAL UNIVERSAL FIX --- */
+
+/* 💻 Desktop/Global Hero Styling */
+.hero-section {
+    background: var(--color-dark);
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    padding: 40px 0; 
+    
+    /* UNIVERSAL FIX 1: Push content down */
+    /* This padding is applied to the HERO itself, ensuring it starts below the fixed header */
+    padding-top: calc(40px + var(--header-height-desktop));
+    
+    /* UNIVERSAL FIX 2: Ensure it always fills the rest of the screen */
+    min-height: calc(100vh - var(--header-height-desktop)); 
+}
+
+/* 📱 Mobile Phone Adjustments (Max Width 768px) */
+@media (max-width: 768px) {
+    
+    /* HERO SECTION FINAL MOBILE FIX */
+    .hero-section {
+        /* Remove the padding-top from body (if it was applied there) and apply it here */
+        padding-top: calc(40px + var(--header-height-mobile)); /* Use mobile height variable */
+        
+        /* Ensure min-height fills remaining screen using mobile height variable */
+        min-height: calc(100vh - var(--header-height-mobile)); 
+        
+        /* Reduce bottom padding slightly */
+        padding-bottom: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+        /* Use MIN() to ensure the margin never gets too small on tiny screens, but is manageable */
+        margin-bottom: min(4vw, 20px); 
+    }
+    
+    /* ... (rest of the 768px media query code) ... */
+}
+
+/* --- HOME.CSS: HERO SECTION FINAL FIX --- */
+
+.hero-section {
+    background: var(--color-dark);
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    
+    /* CRITICAL: Ensure the content starts below the fixed header footprint on desktop */
+    padding-top: calc(40px + var(--header-height-desktop));
+    
+    /* Keep the screen height logic */
+    min-height: calc(100vh - var(--header-height-desktop)); 
+    padding-bottom: 40px; 
+}
+
+.hero-text h1 {
+    /* Ensure no residual top margin is active */
+    margin-top: 0 !important; 
+}
+
+
+/* 📱 Mobile Phone Adjustments (Max Width 768px) */
+@media (max-width: 768px) {
+    
+    /* HERO SECTION FINAL MOBILE FIX */
+    .hero-section {
+        /* Remove the padding-top that pushed it down for the desktop view */
+        padding-top: 40px; 
+        
+        /* Set minimum height to fill the screen */
+        min-height: calc(100vh - var(--header-height-mobile)); 
+        padding-bottom: 40px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+        margin-top: 0 !important; /* Double assurance */
+    }
+}
+
+/* CRITICAL: Apply the final body padding-top at a breakpoint where the issue occurs */
+@media (max-width: 768px) {
+    body {
+        /* This should be the only place the padding is applied for mobile */
+        padding-top: var(--header-height-mobile) !important; 
+    }
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #e0e0e0;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

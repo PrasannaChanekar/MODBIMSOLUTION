@@ -1,0 +1,46 @@
+.page-hero {
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    padding: 80px 0;
+    text-align: center;
+}
+.page-hero h1 { color: var(--color-dark); }
+
+.mission-section {
+    background-color: var(--color-light);
+    padding: 80px 0;
+}
+
+.mission-section .image-block {
+    height: 400px;
+    background-color: #eee; /* Placeholder */
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-light);
+}
+
+.team-section {
+    background-color: var(--color-bg-light);
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member-card {
+    background-color: var(--color-light);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+}

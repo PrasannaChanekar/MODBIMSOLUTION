@@ -1,0 +1,357 @@
+/* 🏷️ Header Styling (Desktop) */
+
+
+
+.main-header {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    transition: color var(--transition-speed);
+}
+.logo-mod { color: var(--color-primary); margin-right: 5px; }
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 10px 15px;
+    transition: color var(--transition-speed);
+    font-weight: 600;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-primary);
+}
+
+.contact-btn {
+    margin-left: 20px;
+}
+
+/* Mobile Toggle (Burger Icon) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-dark);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Burger to X Animation */
+.menu-toggle.is-open .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.is-open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.is-open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* 📐 Footer Styling */
+.main-footer {
+    background-color: var(--color-dark);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 60px 0 20px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.main-footer h3, .main-footer h4 {
+    color: var(--color-light);
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    line-height: 2.2;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-secondary);
+}
+
+.social-links a {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* 📱 Layout Responsiveness */
+@media (max-width: 992px) {
+    /* Mobile Menu Display Logic */
+    .menu-toggle {
+        display: block;
+    }
+    
+    .main-nav {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 65px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-light);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        overflow: hidden;
+    }
+
+    .main-nav.active {
+        display: block; /* Shown when JS toggles 'active' */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 15px 0;
+    }
+    
+    .contact-btn {
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    /* Footer Responsiveness */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .social-links { margin-top: 15px; }
+}
+
+/* --- LAYOUT.CSS: ENHANCED RESPONSIVENESS --- */
+
+/* 💻 Tablet & Smaller Desktop Adjustments (Max Width 992px) */
+@media (max-width: 992px) {
+    
+    /* Header/Navigation */
+    .header-content {
+        /* Ensures logo and toggle are on the same line, wrapping content below */
+        flex-wrap: wrap; 
+        padding: 10px 0;
+    }
+
+    .main-nav {
+        display: none; /* Hidden by default, shown by JS when 'active' */
+        position: absolute;
+        top: 60px; /* Adjusted to fit common header height */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-light);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+        max-height: 80vh; /* Prevents menu from exceeding screen height */
+        overflow-y: auto; /* Allows scrolling if menu is very long */
+    }
+
+    .main-nav.active {
+        display: block; 
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-link {
+        padding: 15px 0;
+    }
+    
+    .contact-btn {
+        margin: 10px auto 20px auto; /* Centered contact button in mobile menu */
+        width: 80%;
+    }
+    
+    .menu-toggle {
+        display: block; /* Show burger icon */
+    }
+
+    /* Footer Responsiveness */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* 📱 Small Mobile Phone Adjustments (Max Width 576px) */
+@media (max-width: 576px) {
+    /* Global Adjustments */
+    .container {
+        width: 95%; /* Use more screen width on small devices */
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    /* Footer Responsiveness */
+    .footer-grid {
+        /* Stacks all columns vertically on smallest screens */
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-info, .footer-links, .footer-contact {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* --- LAYOUT.CSS: HEADER FIXED POSITION & HEIGHT --- */
+
+.main-header {
+    /* ... existing styles ... */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: var(--header-height-desktop); /* Use variable */
+}
+
+/* ... (Keep existing desktop header content styles) ... */
+
+
+/* 💻 Tablet & Smaller Desktop Adjustments (Max Width 992px) */
+@media (max-width: 992px) {
+    
+    .main-header {
+        height: var(--header-height-mobile); /* Use mobile variable */
+    }
+
+    .main-nav {
+        /* CRUCIAL: Top position MUST be calculated from the header's height */
+        top: var(--header-height-mobile); 
+    }
+    
+    /* Global Content Push Adjustment for Mobile Header Height */
+    /* OVERRIDE GLOBAL.CSS padding-top with the mobile variable */
+    body {
+        padding-top: var(--header-height-mobile);
+    }
+    
+    /* ... (rest of the media query code) ... */
+}
+
+/* --- LAYOUT.CSS: HEADER HEIGHT STANDARDIZATION --- */
+
+/* 💻 Desktop/Global Header */
+.main-header {
+    /* Ensures header is the absolute priority and stays on top */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: var(--header-height-desktop); /* 70px */
+}
+
+/* ... (Existing desktop/tablet header styling remains the same) ... */
+
+/* 📱 Mobile Adjustments (Max Width 992px) */
+@media (max-width: 992px) {
+    
+    .main-header {
+        height: var(--header-height-mobile); /* 60px */
+    }
+
+    .main-nav {
+        /* CRUCIAL: Must match mobile header height exactly */
+        top: var(--header-height-mobile); 
+    }
+    
+    /* ... (rest of the mobile nav/footer styles) ... */
+}
+
+/* --- LAYOUT.CSS: HEADER FIX (FINAL AGGRESSIVE) --- */
+
+/* 💻 Desktop/Global Header */
+.main-header {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: var(--header-height-desktop); 
+}
+
+/* 💻 Tablet & Smaller Desktop Adjustments (Max Width 992px) */
+@media (max-width: 992px) {
+    /* ... existing mobile header height styles ... */
+
+    /* CRITICAL FIX: Ensure padding-top is applied only on mobile views */
+    body {
+        /* ONLY apply the offset when the fixed header is active and the screen is small */
+        padding-top: var(--header-height-mobile) !important;
+    }
+}

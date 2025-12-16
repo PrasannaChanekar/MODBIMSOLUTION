@@ -1,0 +1,148 @@
+.contact-section {
+    padding: 80px 0;
+    background-color: var(--color-light);
+}
+
+.contact-info {
+    padding-right: 30px;
+}
+
+.contact-info h1 {
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.info-item i {
+    margin-top: 5px;
+    flex-shrink: 0;
+    background-color: var(--color-secondary);
+}
+
+.info-item h4 {
+    margin: 0;
+    color: var(--color-heading);
+}
+
+.contact-form {
+    padding: 40px;
+    background-color: var(--color-bg-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-hover);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-heading);
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* --- Contact.css: Dual Contact Form Styling --- */
+
+/* 1. Desktop and Tablet Layout (Two Columns) */
+.forms-container {
+    display: grid;
+    /* Two equal columns for the forms */
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 992px) {
+    .forms-container {
+        grid-template-columns: 1fr; /* Stack into one column on tablet/mobile */
+    }
+}
+
+/* 2. Form Card Appearance (Attractive & Professional) */
+.form-card {
+    padding: 30px;
+    border-radius: 10px;
+    /* Professional shadow for depth */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
+    height: 100%; /* Ensures both cards look uniform */
+}
+
+.project-inquiry {
+    background-color: var(--color-light); /* Light base for professional look */
+    border-top: 5px solid var(--color-primary);
+}
+
+.course-inquiry {
+    background-color: #f0fff0; /* Very light subtle distinction for the Academy */
+    border-top: 5px solid var(--color-secondary);
+}
+
+.form-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    font-size: 0.95em;
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+/* 3. Input Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 12px; /* Slightly larger padding for better touch targets */
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styling (Should pull from global.css, but ensure secondary color is right) */
+.btn-secondary-contact {
+    background-color: var(--color-secondary); 
+    color: white;
+    border: 2px solid var(--color-secondary);
+    width: 100%; /* Make buttons full width on mobile */
+    margin-top: 10px;
+}

@@ -1,0 +1,181 @@
+/* Custom Fonts (Poppins for headings/bold, Roboto Mono for tech body text) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Poppins:wght@400;600;700;800&display=swap');
+
+/* 🧱 Variables & Resets */
+:root {
+    --color-primary: #007bff; /* BIM Blue */
+    --color-secondary: #00bcd4; /* Accent Teal/Cyan */
+    --color-tertiary: #ff9800; /* Tertiary Orange for highlights */
+    --color-dark: #212529; 
+    --color-light: #ffffff;
+    --color-bg-light: #f4f7f9; /* Light Gray Background */
+    --color-text: #495057;
+    --color-heading: #1e272e;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Roboto Mono', monospace; 
+    --border-radius: 10px;
+    --transition-speed: 0.4s;
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-bg-light);
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    line-height: 1.1;
+    margin-bottom: 0.6em;
+}
+
+h1 { font-size: 3rem; font-weight: 800; }
+h2 { font-size: 2.2rem; font-weight: 700; }
+
+/* Utility & Container */
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.highlight {
+    color: var(--color-primary);
+}
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Buttons (Animated) */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-light) !important;
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+    background-color: var(--color-light);
+    color: var(--color-dark) !important;
+    border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-light) !important;
+    transform: translateY(-3px);
+    border-color: var(--color-secondary);
+}
+
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary);
+    padding: 8px 18px;
+    font-size: 0.9rem;
+}
+
+.btn-tertiary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light) !important;
+}
+
+/* Placeholder Icons (requires a library like FontAwesome in a real project) */
+i[class^="icon-"] {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-light);
+    text-align: center;
+    line-height: 40px;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.icon-4d::before { content: 'T'; }
+.icon-5d::before { content: '$'; }
+.icon-clash::before { content: 'X'; }
+.icon-fm::before { content: 'M'; }
+.icon-linkedin::before { content: 'L'; }
+.icon-twitter::before { content: 'T'; }
+.icon-instagram::before { content: 'I'; }
+.icon-email::before { content: '@'; }
+.icon-phone::before { content: 'P'; }
+.icon-location::before { content: 'L'; }
+
+
+/* 📱 Global Responsiveness */
+@media (max-width: 992px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    section { padding: 60px 0; }
+    .grid-2-col { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: 2rem; }
+    .btn { padding: 10px 20px; }
+}
+
+/* --- GLOBAL.CSS: ADDING HEADER HEIGHT VARIABLES --- */
+
+:root {
+    /* ... existing variables ... */
+    --header-height-desktop: 70px;
+    --header-height-mobile: 60px;
+}
+
+/* Add to the top of GLOBAL.CSS or ensure body padding is correct */
+body {
+    /* Set padding-top globally using the desktop variable */
+    padding-top: var(--header-height-desktop);
+    font-family: var(--font-body);
+    /* ... other body styles ... */
+}
+
+/* --- GLOBAL.CSS: Remove the body padding-top here if it exists --- */
+body {
+    /* Reset padding-top here to ensure it's handled ONLY by the media query below */
+    padding-top: 0 !important; 
+    /* ... existing body styles ... */
+}
